@@ -95,3 +95,86 @@
 .about-service-section {
   padding: 0px 150px;
 }
+.service-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.services-section {
+  margin-top: 70px;
+}
+.service-icons {
+  display: flex;
+  column-gap: 65px;
+}
+.carpet,
+.bedroom,
+.sofa,
+.toilet {
+  width: 120px;
+  height: 200px;
+}
+.icon {
+  width: 100%;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(80%) saturate(886%)
+    hue-rotate(356deg) brightness(99%) contrast(70%);
+}
+.service-btn {
+  background: #cf881d;
+  border-radius: 50px;
+  border: none;
+  padding: 16px 24px;
+  color: #ffff;
+  margin-top: 80px;
+}
+.video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+.video-iframe {
+  border-radius: 50px;
+  width: 800px;
+  height: 600px;
+}
+.pricing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+.pricing-div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.video-heading {
+  margin-bottom: 50px;
+}
+.price-row {
+  display: flex;
+  column-gap: 165px;
+  border: 1px solid #eeeeee;
+  align-items: center;
+  height: 120px;
+  padding: 10px 80px;
+}
+.type-name {
+  width: 100px;
+}
+.purchase-btn {
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(50deg, #ffffff 0.74%, #cf881d 91.81%);
+}
+.middle-row {
+  background: linear-gradient(90deg, #737373 22.74%, #cf881d 91.81%);
+}
