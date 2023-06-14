@@ -3,18 +3,32 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #eeeeee;
+}
+
 .header-menu {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
+  width: 100vw;
+  padding: 60px 0px;
+}
+.company-top-logo {
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  left: 3vw;
 }
 .nav-menu-lists,
 .nav-menu {
   display: flex;
   list-style: none;
   align-items: center;
-  column-gap: 40px;
-  width: 60vw;
+  column-gap: 7vw;
+  width: 100%;
+  flex-wrap: wrap;
 }
 .top-content {
   background-image: url(../assets/top-bg-image.svg);
@@ -25,19 +39,37 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 248px 0px 342px 0px;
+  padding: 0px 0px 342px 0px;
 }
 .top-headline {
   margin-top: 10px;
   margin-bottom: 45px;
   font-family: Prompt;
-  width: 70%;
   font-style: bold;
-  font-size: 40px;
-  line-height: 86px;
+  font-size: 2.5rem;
+  line-height: 5rem;
   text-align: center;
   vertical-align: top;
   color: #ffff;
+}
+.home {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+  color: #000000;
+}
+.about,
+.prices,
+.service,
+.contact {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+  color: #5a5a5a;
 }
 .down-headline-btn {
   background: #cf881d;
@@ -79,18 +111,18 @@
   position: relative;
 }
 .window-clean {
-  width: 400px;
+  width: 29vw;
 }
 .clear-sing {
-  width: 300px;
+  width: 23vw;
 }
 .about-service-section {
   margin-top: 100px;
 }
 .absolute-image {
   position: absolute;
-  top: 169px;
-  left: 167px;
+  top: 16vh;
+  left: 12vw;
 }
 .about-service-headline {
   margin: 10px 0px 45px 0px;
@@ -152,6 +184,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 100px;
+  width: 90vw;
 }
 .pricing-div {
   display: flex;
@@ -161,6 +194,7 @@
 .video-heading {
   margin-bottom: 50px;
 }
+
 .pricing-section-top {
   display: flex;
   flex-direction: column;
@@ -204,6 +238,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 60px 0px;
 }
 .bottom-star {
   filter: brightness(0) saturate(100%) invert(100%) sepia(6%) saturate(3%)
@@ -232,4 +267,16 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 20px;
+}
+@media (max-width: 768px) {
+  .about-service-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .price-row {
+    flex-direction: column;
+  }
+  .manipulate-pricing-div {
+    flex-direction: column;
+  }
 }
