@@ -6,32 +6,85 @@
 body {
   background-color: #eeeeee;
 }
-
 .header-menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   width: 100vw;
-  padding: 60px 0px;
+  padding: 60px 30px;
+}
+.hamburger-menu-lines {
+  display: flex;
+  flex-direction: column;
+  transition: 0.3 ease;
+  row-gap: 3px;
+}
+.hamburger-menu {
+  transition: 0.3s ease;
+}
+.nav-menu-lists-hamburger {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  position: absolute;
+  color: #ffffff;
+  background: linear-gradient(
+    44deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  border-radius: 5px;
+  text-shadow: #ffff;
+  width: 150px;
+  padding-left: 1vw;
+  left: 0;
+  top: 90px;
+}
+
+.hamburger-menu-line-active {
+  transform: rotate(40deg);
+  transition: 0.3s ea;
+}
+.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s linear 0s;
+  opacity: 1;
+}
+
+.hamburger-menu-line {
+  width: 30px;
+  border: 2px solid #ffffff;
+  transition: 0.3s ease;
 }
 .company-top-logo {
   position: absolute;
-  width: 5vw;
-  height: 5vw;
-  left: 3vw;
+  width: 150px;
+  height: 100px;
+  right: 1vw;
+}
+li {
+  list-style: none;
+}
+.type-lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .nav-menu-lists,
 .nav-menu {
   display: flex;
   list-style: none;
   align-items: center;
-  column-gap: 7vw;
+  column-gap: 1vw;
   width: 100%;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .top-content {
-  background-image: url(../assets/top-bg-image.svg);
+  background-image: url(../assets/colorful-composition-with-sponges-rags-gloves-detergent-general-cleaning-cleaning-service-concept.jpg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +93,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0px 0px 342px 0px;
+}
+.body-op {
+  background-image: linear-gradient(#f5f7fa1d, #b8c6db),
+    url(../assets/colorful-composition-with-sponges-rags-gloves-detergent-general-cleaning-cleaning-service-concept.jpg);
 }
 .top-headline {
   margin-top: 10px;
@@ -69,7 +126,7 @@ body {
   font-weight: bold;
   font-size: 1.125rem;
   line-height: 1.688rem;
-  color: #5a5a5a;
+  /* color: linear-gradient(200deg #ffffff 22.74%, #cf881d 91.81%); */
 }
 .down-headline-btn {
   background: #cf881d;
@@ -81,6 +138,9 @@ body {
   color: #ffff;
   cursor: pointer;
 }
+.nav-menu {
+  display: none;
+}
 .above-top-headline {
   background: linear-gradient(90deg, #ffffff 22.74%, #cf881d 91.81%);
   -webkit-background-clip: text;
@@ -88,6 +148,7 @@ body {
   background-clip: text;
   color: transparent;
   font-size: 18px;
+  text-align: center;
 }
 .window-clean-with-stars {
   display: flex;
@@ -109,20 +170,22 @@ body {
 }
 .about-service-lef {
   position: relative;
+  height: 300px;
 }
 .window-clean {
-  width: 29vw;
+  width: 250px;
 }
 .clear-sing {
-  width: 23vw;
+  width: 200px;
 }
 .about-service-section {
   margin-top: 100px;
 }
 .absolute-image {
   position: absolute;
-  top: 16vh;
-  left: 12vw;
+  width: 200px;
+  top: 110px;
+  left: 100px;
 }
 .about-service-headline {
   margin: 10px 0px 45px 0px;
@@ -184,7 +247,6 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 100px;
-  width: 90vw;
 }
 .pricing-div {
   display: flex;
@@ -198,19 +260,25 @@ body {
 .pricing-section-top {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+.pricing-section-top-headline {
+  text-align: center;
 }
 .price-row {
   display: flex;
   column-gap: 18vw;
   border: 1px solid #eeeeee;
   align-items: center;
-  height: 120px;
+  height: 200px;
   padding: 10px 2vw;
 }
 .type-name {
   width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .purchase-btn {
   padding: 8px 24px;
@@ -231,6 +299,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column-reverse;
+}
+.faq-content-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
 }
 .bottom-comerc {
   background: #cf881d;
@@ -255,6 +331,17 @@ body {
   border: none;
   padding: 8px 23px;
 }
+
+.mail,
+.social,
+.phone {
+  width: 50px;
+  height: 50px;
+}
+.fb-icon {
+  max-width: 100%;
+  height: 100%;
+}
 .bottom-btn-left {
   color: #ffffff;
   background: #cf881d;
@@ -264,19 +351,36 @@ body {
 }
 .footer {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   padding: 20px 20px;
+  flex-wrap: wrap;
 }
-@media (max-width: 768px) {
-  .about-service-section {
-    display: flex;
-    flex-direction: column;
+
+.about-service-section {
+  display: flex;
+  flex-direction: column;
+}
+.price-row {
+  flex-direction: column;
+}
+.manipulate-pricing-div {
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .nav-menu {
+    display: block;
   }
-  .price-row {
-    flex-direction: column;
+  .top-content {
+    background-image: url(../assets/top-bg-image.svg);
   }
-  .manipulate-pricing-div {
-    flex-direction: column;
+  .hamburger-menu {
+    display: none;
+  }
+  .company-top-logo {
+    left: 1vw;
+    transform: 0.3 ease;
+    width: 200px;
+    height: 150px;
   }
 }
